@@ -167,33 +167,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .quiz-link {
-            background-color: #e0f2f1;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .quiz-button {
-            display: inline-block;
-            background-color: var(--color-quiz-green);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .quiz-button:hover {
-            opacity: 0.9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .back-button {
             display: inline-block;
             margin-top: 20px;
@@ -205,181 +178,6 @@
             background-color: #5a6268;
         }
 
-        /* --- Botón TTS --- */
-        .tts-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: var(--color-primary);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 12px 16px;
-            font-size: 1em;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        .tts-button:hover {
-            background-color: var(--color-primary-dark);
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-        .tts-button svg {
-            width: 20px;
-            height: 20px;
-            fill: white;
-        }
-
-        /* --- Estilos de Quiz --- */
-        .quiz-container {
-            padding: 20px;
-        }
-
-        #question-header {
-            margin-bottom: 20px;
-        }
-
-        #question-text {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        #question-counter {
-            font-size: 0.9em;
-            color: #777;
-            text-align: right;
-        }
-
-        #options-container {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #options-container li {
-            background-color: #f9f9f9;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        #options-container li:hover {
-            background-color: #e9f1f7;
-        }
-
-        #options-container li.selected {
-            background-color: #d4e6f1;
-            border-color: var(--color-primary);
-            font-weight: bold;
-        }
-
-        #submit-btn {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        #submit-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Resultados del Quiz */
-        .results-container {
-            padding: 20px;
-        }
-
-        #results-score {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: var(--color-primary-dark);
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        #incorrect-answers h3 {
-            color: var(--color-quiz-red);
-            border-bottom: 2px solid #f5c6cb;
-            padding-bottom: 5px;
-        }
-
-        #incorrect-answers ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #incorrect-answers li {
-            background-color: #fdf7f7;
-            border: 1px solid #f5c6cb;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        #incorrect-answers .question {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        #incorrect-answers .user-answer {
-            color: var(--color-quiz-red);
-        }
-
-        #incorrect-answers .correct-answer {
-            color: var(--color-quiz-green);
-            font-weight: 500;
-        }
-
-        /* Modal simple para Alertas */
-        .simple-modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.4); 
-        }
-        .simple-modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; 
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-        .simple-modal-close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .simple-modal-close:hover {
-            color: black;
-        }
     </style>
 </head>
 <body>
@@ -413,11 +211,8 @@
             
             <nav class="main-nav">
                 <h2>Temas del Examen</h2>
-                <button onclick="navigateToPage('page-topic1')" class="nav-button">1. Creación y Navegación</button>
-                <button onclick="navigateToPage('page-topic2')" class="nav-button">2. Formato de Página</button>
-                <button onclick="navigateToPage('page-topic3')" class="nav-button">3. Formato de Texto y Párrafo</button>
-                <button onclick="navigateToPage('page-topic4')" class="nav-button">4. Estilos y Espaciado</button>
-                <button onclick="navigateToPage('page-topic5')" class="nav-button">5. Guardar e Inspeccionar</button>
+                <button onclick="navigateToPage('page-modulo1')" class="nav-button">Módulo 1: Administrar Documentos</button>
+                <button onclick="navigateToPage('page-modulo2')" class="nav-button">Módulo 2: Insertar y Formatear Texto, Párrafos y Secciones</button>
             </nav>
         </main>
         
@@ -426,346 +221,331 @@
         </footer>
     </div>
 
-    <!-- ========== PÁGINA TEMA 1: Creación y Navegación ========== -->
-    <div id="page-topic1" class="page">
+    <!-- ========== PÁGINA MÓDULO 1 ========== -->
+    <div id="page-modulo1" class="page">
         <header>
-            <h1>1. Creación y Navegación</h1>
+            <h1>Módulo 1: Administrar Documentos</h1>
         </header>
         <main>
             <section class="content-section">
-                <h2>¿Cómo crear un documento nuevo?</h2>
-                <p>Hay varias formas, pero estas son las clave:</p>
-                <dl>
-                    <dt>1. El Atajo Mágico (Para Expertos)</dt>
-                    <dd>Para crear un documento nuevo al instante, usa el atajo de teclado.</dd>
-                </dl>
-                <div class="formula-box">
-                    CTRL + U
-                </div>
-                <p>(En Mac, sería CMD + N)</p>
-                
-                <dl>
-                    <dt>2. La Ruta Completa (Con Sorpresas)</dt>
-                    <dd>Ve al menú <strong>Archivo > Nuevo</strong>. Este camino no solo te da un documento en blanco, sino que también te muestra un universo de plantillas listas para usar.</dd>
-                </dl>
-            </section>
-
-            <section class="content-section">
-                <h2>Buscar y Reemplazar</h2>
-                <dl>
-                    <dt>Buscar (El Detective)</dt>
-                    <dd>Se usa para encontrar una palabra o frase en tu documento. Vas a la pestaña <strong>Inicio > Edición > Buscar</strong>. Se abrirá el Panel de Navegación.</dd>
-                    <dd><strong>¡Atajo Pro!</strong> Presiona <strong>CTRL + B</strong> para abrirlo.</dd>
-                
-                    <dt>Reemplazar (El Editor Rápido)</dt>
-                    <dd>Se usa para buscar una palabra y cambiarla por otra. Vas a la pestaña <strong>Inicio > Edición > Reemplazar</strong>.</dd>
-                    <dd><strong>¡Atajo Pro!</strong> Presiona <strong>CTRL + L</strong> para abrirlo.</dd>
-                </dl>
-            </section>
-
-            <section class="content-section">
-                <h2>Marcadores (Separadores Invisibles)</h2>
-                <p>Un marcador es una "etiqueta" invisible que pones en un lugar específico de tu documento. Le das un nombre único para poder encontrar ese punto exacto más tarde.</p>
-                <p>Se encuentran en la pestaña <strong>Insertar > Vínculos > Marcador</strong>.</p>
-                
-                <h3>¡Reglas para nombrar!</h3>
+                <h2>Lección 1: Crear un documento en blanco</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Para empezar a escribir un nuevo trabajo, carta, o cualquier proyecto desde cero.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
                 <ul>
-                    <li>Debe empezar siempre con una <strong>letra</strong>.</li>
-                    <li><strong>No puede tener espacios</strong>. Si quieres separar palabras, usa un guion bajo (ej. Capitulo_Uno).</li>
+                    <li><strong>El Atajo Mágico:</strong> Presiona las teclas <strong>CTRL + U</strong> al mismo tiempo.</li>
+                    <li><strong>La Ruta Completa:</strong> Ve al menú <strong>Archivo > Nuevo</strong>. Esta ruta también te permite elegir plantillas (diseños ya hechos).</li>
                 </ul>
             </section>
 
-            <!-- Quiz Link -->
-            <section class="quiz-link">
-                <h2>Test Yourself</h2>
-                <p>Comprueba tu comprensión de este tema.</p>
-                <button onclick="navigateToPage('page-quiz', 'topic1')" class="quiz-button">Iniciar Quiz (5 Preguntas)</button>
-            </section>
-            
-            <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            <button class="tts-button" onclick="readPageContent(this)">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-                Leer Texto
-            </button>
-        </main>
-    </div>
-
-    <!-- ========== PÁGINA TEMA 2: Formato de Página ========== -->
-    <div id="page-topic2" class="page">
-        <header>
-            <h1>2. Formato de Página</h1>
-        </header>
-        <main>
             <section class="content-section">
-                <h2>Configurar Página (Pestaña "Disposición")</h2>
-                <p>Aquí controlas el "lienzo" de tu documento. Lo encuentras en la pestaña <strong>Disposición</strong> (o Diseño de Página), en el grupo <strong>Configurar página</strong>.</p>
-                <dl>
-                    <dt>Márgenes</dt>
-                    <dd>Define el espacio en blanco en los bordes de tu página (arriba, abajo, izquierda y derecha).</dd>
-                    
-                    <dt>Orientación</dt>
-                    <dd>Elige si quieres tu hoja en formato <strong>Vertical</strong> (alta) u <strong>Horizontal</strong> (ancha).</dd>
-                    
-                    <dt>Tamaño</dt>
-                    <dd>Selecciona el tamaño físico de tu papel, como <strong>Carta (Letter)</strong>, <strong>Oficio (Legal)</strong> o <strong>A4</strong>.</dd>
-                    
-                    <dt>Columnas</dt>
-                    <dd>Divide tu texto en dos o más columnas, como un periódico. (Pestaña Disposición > Columnas).</dd>
-                </dl>
+                <h2>Lección 2: Búsqueda de texto</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Te permite encontrar rápidamente una palabra o frase específica dentro de un documento, sin tener que leerlo todo. Es como un "detector de palabras".</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ul>
+                    <li>Ve a la pestaña <strong>Inicio > Edición > Buscar</strong>.</li>
+                    <li><strong>Atajo Pro:</strong> Presiona <strong>CTRL + B</strong>.</li>
+                    <li>Se abrirá un panel de "Navegación" donde escribes la palabra que buscas.</li>
+                </ul>
             </section>
 
             <section class="content-section">
-                <h2>Encabezados y Pies de Página</h2>
-                <p>Son áreas en los márgenes superior (encabezado) e inferior (pie de página) que repiten información en cada página (como el número de página o el título).</p>
-                <p>Los encuentras en la pestaña <strong>Insertar > grupo Encabezado y pie de página</strong>.</p>
-            </section>
-            
-            <section class="content-section">
-                <h2>Bordes de Página</h2>
-                <p>Permite añadir un borde decorativo a toda la página (como un marco).</p>
-                <p>Lo encuentras en la pestaña <strong>Diseño > grupo Fondo de página > Bordes de página</strong>.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Saltos (¡Concepto Clave!)</h2>
-                <p>Los saltos te dan control total sobre dónde empieza y termina tu texto. Los encuentras en <strong>Disposición > Saltos</strong>.</p>
-                <dl>
-                    <dt>Salto de Página</dt>
-                    <dd>Fuerza al texto a empezar en una hoja nueva. ¡Nunca presiones "Enter" muchas veces!</dd>
-                    <dd><strong>Atajo: CTRL + ENTER</strong>.</dd>
-
-                    <dt>Salto de Columna</dt>
-                    <dd>Si usas columnas, esto fuerza al texto a saltar a la siguiente columna.</dd>
-
-                    <dt>Salto de Sección (¡El más Poderoso!)</dt>
-                    <dd>Son como "mini-documentos". Te permiten cambiar el formato (como la orientación o las columnas) en una parte del documento sin afectar a las demás.</dd>
-                </dl>
-            </section>
-
-            <!-- Quiz Link -->
-            <section class="quiz-link">
-                <h2>Test Yourself</h2>
-                <p>Comprueba tu comprensión de este tema.</p>
-                <button onclick="navigateToPage('page-quiz', 'topic2')" class="quiz-button">Iniciar Quiz (5 Preguntas)</button>
-            </section>
-
-            <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            <button class="tts-button" onclick="readPageContent(this)">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-                Leer Texto
-            </button>
-        </main>
-    </div>
-
-    <!-- ========== PÁGINA TEMA 3: Formato de Texto y Párrafo ========== -->
-    <div id="page-topic3" class="page">
-        <header>
-            <h1>3. Formato de Texto y Párrafo</h1>
-        </header>
-        <main>
-            <section class="content-section">
-                <h2>El Grupo "Fuente"</h2>
-                <p>Es tu centro de estilo. Lo encuentras en la pestaña <strong>Inicio > grupo Fuente</strong>. Aquí puedes cambiar el <strong>tipo de letra</strong>, <strong>tamaño</strong>, <strong>color</strong>, y aplicar <strong>Negrita (N)</strong>, <strong>Cursiva (K)</strong> y <strong>Subrayado (S)</strong>.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Efectos de Texto (El Toque Artístico)</h2>
-                <p>Esto te permite aplicar efectos especiales a tu texto para hacerlo resaltar. Puedes añadir <strong>sombra</strong>, <strong>iluminado</strong> o un <strong>reflejo</strong>.</p>
-                <p>Lo encuentras en la pestaña <strong>Inicio > Fuente > botón de Efectos de texto</strong> (la 'A' con contorno azul).</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Copiar Formato (La Brocha Mágica)</h2>
-                <p>Esta herramienta es increíble. Te permite "absorber" el formato (color, tamaño, negrita, etc.) de un texto y "pintarlo" sobre otro texto.</p>
-                <p>La encuentras en la pestaña <strong>Inicio > grupo Portapapeles > ícono de la brocha</strong>.</p>
+                <h2>Lección 3: Marcadores e hipervínculos</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Un <strong>Marcador</strong> es una "etiqueta" invisible que pones en un lugar específico (como un separador de libros). Un <strong>Hipervínculo</strong> es un enlace que te permite saltar a ese marcador desde otra parte del documento.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
                 <ol>
-                    <li>Seleccionas el texto "maestro" (el que tiene el formato que te gusta).</li>
-                    <li>Haces clic en la brocha.</li>
-                    <li>Seleccionas el texto que quieres cambiar.</li>
+                    <li><strong>Poner el Marcador:</strong> Ve a la pestaña <strong>Insertar > Vínculos > Marcador</strong>. Dale un nombre (¡sin espacios!) y haz clic en "Agregar".</li>
+                    <li><strong>Crear el Hipervínculo:</strong> Selecciona el texto que será tu enlace (ej. "Ir al Capítulo 1"), haz clic derecho > Vínculo, elige "Lugar de este documento" y selecciona el marcador que creaste.</li>
+                </ol>
+                <h3>¡Reglas para nombrar marcadores!</h3>
+                <ul>
+                    <li>Debe empezar siempre con una <strong>letra</strong>.</li>
+                    <li><strong>No puede tener espacios</strong>. Usa guion bajo (ej. Capitulo_Uno).</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 4: Herramientas de configuración de página</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Controlan el "lienzo" completo de tu documento: el tamaño del papel, su orientación y los espacios en blanco de los bordes.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Encuentras todo en la pestaña <strong>Disposición > Configurar página</strong>.</p>
+                <ul>
+                    <li><strong>Márgenes:</strong> Define el espacio en blanco en los bordes.</li>
+                    <li><strong>Orientación:</strong> Elige entre <strong>Vertical</strong> (hoja parada) u <strong>Horizontal</strong> (hoja acostada).</li>
+                    <li><strong>Tamaño:</strong> Elige el tipo de papel, como <strong>Carta (Letter)</strong>, <strong>Oficio (Legal)</strong> o <strong>A4</strong>.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 5: Aplicar conjunto de estilos</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Para cambiar el "outfit" completo de tu documento con un solo clic. Cambia todas las fuentes, colores y tamaños de tus títulos y párrafos a la vez para dar un look coherente y profesional.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a la pestaña <strong>Diseño</strong>.</li>
+                    <li>En la sección <strong>Formato del documento</strong>, pasa el mouse sobre las diferentes galerías para ver una vista previa.</li>
+                    <li>Haz clic en el que te guste para aplicarlo.</li>
                 </ol>
             </section>
 
             <section class="content-section">
-                <h2>Borrar todo el formato</h2>
-                <p>¿Tu texto es un desastre de colores y tamaños? Selecciona el texto y usa esta herramienta para limpiarlo todo y devolverlo al formato predeterminado.</p>
-                <p>Lo encuentras en la pestaña <strong>Inicio > Fuente > ícono de la 'A' con una goma de borrar</strong>.</p>
-            </section>
-
-            <!-- Quiz Link -->
-            <section class="quiz-link">
-                <h2>Test Yourself</h2>
-                <p>Comprueba tu comprensión de este tema.</p>
-                <button onclick="navigateToPage('page-quiz', 'topic3')" class="quiz-button">Iniciar Quiz (5 Preguntas)</button>
-            </section>
-
-            <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            <button class="tts-button" onclick="readPageContent(this)">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-                Leer Texto
-            </button>
-        </main>
-    </div>
-
-    <!-- ========== PÁGINA TEMA 4: Estilos y Espaciado ========== -->
-    <div id="page-topic4" class="page">
-        <header>
-            <h1>4. Estilos y Espaciado</h1>
-        </header>
-        <main>
-            <section class="content-section">
-                <h2>Sangrías (Espacio a los lados)</h2>
-                <p>Son los espacios que dejas al principio o a los lados de un párrafo. Las configuras desde la pestaña <strong>Inicio > Opciones avanzadas del grupo Párrafo</strong>.</p>
-                <dl>
-                    <dt>Sangría Izquierda / Derecha</dt>
-                    <dd>Mueve el párrafo completo lejos del margen izquierdo o derecho.</dd>
-                    
-                    <dt>Especial: Primera línea</dt>
-                    <dd>Solo la primera línea del párrafo tiene sangría (típico de los cuentos).</dd>
-                    
-                    <dt>Especial: Francesa</dt>
-                    <dd>Todas las líneas del párrafo tienen sangría, EXCEPTO la primera (típico de bibliografías).</dd>
-                </dl>
+                <h2>Lección 6: Insertar y modificar encabezados y pies de página</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Para poner información que se repite en la parte superior (encabezado) o inferior (pie de página) de cada hoja, como el número de página, el título del trabajo o el nombre del autor.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a la pestaña <strong>Insertar > Encabezado y pie de página</strong>.</li>
+                    <li>Elige un diseño predefinido y modifica el texto.</li>
+                    <li><strong>Atajo Pro:</strong> Simplemente haz doble clic en el margen superior o inferior de la página para abrirlos.</li>
+                    <li>Haz doble clic en el centro del documento para salir.</li>
+                </ol>
             </section>
 
             <section class="content-section">
-                <h2>Espaciado (Antes y Después)</h2>
-                <p>Este es el espacio que hay <strong>ENTRE</strong> un párrafo y otro. Se mide en <strong>puntos (pt)</strong> y se configura en las opciones avanzadas del grupo <strong>Párrafo</strong>.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Interlineado (Espacio Interno)</h2>
-                <p>Este es el espacio <strong>DENTRO</strong> de un mismo párrafo, entre una línea y la siguiente. Los valores comunes son <strong>1.0 (Sencillo)</strong>, <strong>1.5</strong>, y <strong>2.0 (Doble)</strong>.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Estilos Rápidos (Pestaña Inicio)</h2>
-                <p>La galería de Estilos (en <strong>Inicio > Estilos</strong>) te permite aplicar un conjunto de formatos con un solo clic. Los más importantes son:</p>
+                <h2>Lección 7: Configurar elementos de fondo de página</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Te permite añadir elementos decorativos o de seguridad al fondo de tu documento, como un borde tipo marco o una marca de agua.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Todo está en la pestaña <strong>Diseño > Fondo de página</strong>.</p>
                 <ul>
-                    <li><strong>Normal:</strong> El texto base del documento.</li>
-                    <li><strong>Título 1, Título 2, etc.:</strong> Para organizar tu documento con jerarquías.</li>
+                    <li><strong>Bordes de página:</strong> Abre una ventana para elegir un estilo de línea, color, ancho o incluso "Arte" (dibujos) para crear un marco.</li>
+                    <li><strong>Marca de agua:</strong> Inserta un texto fantasma (ej. "CONFIDENCIAL") o una imagen detrás del texto principal.</li>
                 </ul>
             </section>
 
             <section class="content-section">
-                <h2>Conjuntos de Estilos (Pestaña Diseño)</h2>
-                <p>Imagina que esto es el "outfit" completo de tu documento. Con un solo clic en la pestaña <strong>Diseño > Formato del documento</strong>, puedes cambiar la apariencia (fuentes, colores, espaciado) de TODOS tus estilos (Título 1, Normal, etc.) a la vez.</p>
-            </section>
-
-            <!-- Quiz Link -->
-            <section class="quiz-link">
-                <h2>Test Yourself</h2>
-                <p>Comprueba tu comprensión de este tema.</p>
-                <button onclick="navigateToPage('page-quiz', 'topic4')" class="quiz-button">Iniciar Quiz (5 Preguntas)</button>
-            </section>
-
-            <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            <button class="tts-button" onclick="readPageContent(this)">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-                Leer Texto
-            </button>
-        </main>
-    </div>
-
-    <!-- ========== PÁGINA TEMA 5: Guardar e Inspeccionar ========== -->
-    <div id="page-topic5" class="page">
-        <header>
-            <h1>5. Guardar e Inspeccionar</h1>
-        </header>
-        <main>
-            <section class="content-section">
-                <h2>Guardar Como... (Archivo > Guardar como)</h2>
-                <p>Esta opción te permite crear una *nueva* copia de tu archivo. Es súper útil para cambiar el "Tipo" de archivo. Los más comunes son:</p>
+                <h2>Lección 8: Guardar documentos</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Usas <strong>Guardar como...</strong> para crear una *nueva* copia de tu archivo, guardarlo con otro nombre o, lo más importante, cambiar el "Tipo" de archivo.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Ve a <strong>Archivo > Guardar como</strong>.</p>
                 <ul>
-                    <li><strong>PDF:</strong> Guarda el archivo como un "retrato" digital que no se puede editar fácilmente.</li>
-                    <li><strong>Documento de Word 97-2003:</strong> Guarda el archivo en un formato antiguo (.doc) para que personas con versiones viejas de Word puedan abrirlo.</li>
+                    <li><strong>Guardar como PDF:</strong> En la lista "Tipo", elige <strong>PDF</strong>. Esto crea un archivo que no se puede editar fácilmente, ideal para compartir.</li>
+                    <li><strong>Guardar para versiones antiguas:</strong> Elige <strong>Documento de Word 97-2003</strong> para que personas con Office viejo puedan abrirlo.</li>
                 </ul>
             </section>
 
             <section class="content-section">
-                <h2>Propiedades del Documento</h2>
-                <p>Es la "información oculta" de tu archivo, como quién es el autor o cuál es el título.</p>
-                <p>Puedes verlas y modificarlas en <strong>Archivo > Información > Panel de Propiedades</strong>. Aquí puedes agregar un <strong>Título</strong>, <strong>Etiquetas</strong> o cambiar el <strong>Autor</strong>.</p>
+                <h2>Lección 9: Modificar propiedades</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Las propiedades son la "información oculta" de tu archivo (metadatos). Sirve para registrar quién es el autor, cuál es el título, añadir etiquetas para buscarlo, etc.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a <strong>Archivo > Información</strong>.</li>
+                    <li>A la derecha, verás el panel de <strong>Propiedades</strong>.</li>
+                    <li>Puedes hacer clic en campos como <strong>Título</strong>, <strong>Etiquetas</strong> o <strong>Autor</strong> para escribir la información.</li>
+                </ol>
             </section>
 
             <section class="content-section">
-                <h2>Inspeccionar Documento (¡Muy Importante!)</h2>
-                <p>Antes de publicar o enviar un archivo, debes usar esta herramienta para <strong>eliminar información personal o propiedades ocultas</strong> (como comentarios, nombre del autor, etc.).</p>
-                <p>La encuentras en <strong>Archivo > Información > Comprobar si hay problemas > Inspeccionar documento</strong>. Después de inspeccionar, puedes hacer clic en "Quitar todo" para limpiar el archivo.</p>
+                <h2>Lección 10: Inspeccionar documentos</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>¡Esta es una herramienta de seguridad! Sirve para buscar y <strong>eliminar información personal o propiedades ocultas</strong> (como comentarios, el nombre del autor, revisiones borradas, etc.) antes de enviar un documento.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a <strong>Archivo > Información > Comprobar si hay problemas</strong>.</li>
+                    <li>Selecciona <strong>Inspeccionar documento</strong>.</li>
+                    <li>Marca las casillas de lo que quieres buscar y haz clic en "Inspeccionar".</li>
+                    <li>Haz clic en <strong>"Quitar todo"</strong> en las secciones que quieras limpiar.</li>
+                </ol>
             </section>
 
             <section class="content-section">
-                <h2>Revisión de Documentos</h2>
-                <p>En el mismo menú de "Comprobar si hay problemas" hay dos opciones más:</p>
-                <dl>
-                    <dt>Comprobar accesibilidad</dt>
-                    <dd>Examina si hay contenido que pueda ser difícil de leer para personas con discapacidad (ej. imágenes sin texto alternativo).</dd>
-                    
-                    <dt>Comprobar compatibilidad</dt>
-                    <dd>Revisa si usaste características nuevas (como modelos 3D) que <strong>no se verán bien en versiones *antiguas* de Word</strong>.</dd>
-                </dl>
+                <h2>Lección 11: Inspeccionar documentos para accesibilidad</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Sirve para revisar si tu documento tiene problemas que lo hagan difícil de leer para personas con discapacidades (ej. visuales). La computadora te avisa si, por ejemplo, olvidaste describir una imagen.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a <strong>Archivo > Información > Comprobar si hay problemas</strong>.</li>
+                    <li>Selecciona <strong>Comprobar accesibilidad</strong>.</li>
+                    <li>Se abrirá un panel a la derecha indicando los problemas y por qué deberías arreglarlos.</li>
+                </ol>
             </section>
 
-            <!-- Quiz Link -->
-            <section class="quiz-link">
-                <h2>Test Yourself</h2>
-                <p>Comprueba tu comprensión de este tema.</p>
-                <button onclick="navigateToPage('page-quiz', 'topic5')" class="quiz-button">Iniciar Quiz (5 Preguntas)</button>
+            <section class="content-section">
+                <h2>Lección 12: Modo compatibilidad</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Sirve para revisar si tu documento usa características nuevas (como modelos 3D o efectos de texto modernos) que <strong>no se verán bien o se perderán</strong> si alguien abre el archivo en una versión *antigua* de Word (ej. Word 97-2003).</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a <strong>Archivo > Información > Comprobar si hay problemas</strong>.</li>
+                    <li>Selecciona <strong>Comprobar compatibilidad</strong>.</li>
+                    <li>Te mostrará una lista de "problemas" para que sepas qué se perderá en versiones viejas.</li>
+                </ol>
+            </section>
+            
+            <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
+        </main>
+    </div>
+
+    <!-- ========== PÁGINA MÓDULO 2 ========== -->
+    <div id="page-modulo2" class="page">
+        <header>
+            <h1>Módulo 2: Insertar y Formatear</h1>
+        </header>
+        <main>
+            <section class="content-section">
+                <h2>Lección 1: Buscar y reemplazar texto</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p><strong>Buscar (CTRL+B)</strong> te permite encontrar rápidamente una palabra en un documento largo. <strong>Reemplazar (CTRL+L)</strong> te permite buscar una palabra (ej. "Juan") y cambiarla por otra (ej. "Pedro"), en todo el documento o una por una.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ul>
+                    <li><strong>Buscar:</strong> Ve a <strong>Inicio > Edición > Buscar</strong> o presiona <strong>CTRL + B</strong>.</li>
+                    <li><strong>Reemplazar:</strong> Ve a <strong>Inicio > Edición > Reemplazar</strong> o presiona <strong>CTRL + L</strong>.</li>
+                    <li>Escribe la palabra en "Buscar:" y la nueva palabra en "Reemplazar con:".</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 2: Insertar símbolos y caracteres especiales</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Sirve para insertar caracteres que no están en tu teclado, como el símbolo de Copyright (©), marca registrada (®), grados (°), monedas (€, £, ¥) o flechas (→).</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Ve a la pestaña <strong>Insertar</strong>.</li>
+                    <li>Al final de la cinta, haz clic en <strong>Símbolo</strong>.</li>
+                    <li>Elige uno de la lista rápida o haz clic en <strong>Más símbolos...</strong> para abrir la galería completa.</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 3: Aplicar formato de fuente</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Es el centro de control para cambiar la apariencia de tu texto (letras). Te permite cambiar el tipo de letra, tamaño, color y aplicar estilos básicos.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Selecciona tu texto y ve a la pestaña <strong>Inicio > grupo Fuente</strong>. Aquí puedes:</p>
+                <ul>
+                    <li>Cambiar el <strong>Tipo de letra</strong> (ej. Arial, Times New Roman).</li>
+                    <li>Cambiar el <strong>Tamaño</strong>.</li>
+                    <li>Aplicar <strong>Negrita (N)</strong>, <strong>Cursiva (K)</strong>, o <strong>Subrayado (S)</strong>.</li>
+                    <li>Cambiar el <strong>Color de fuente</strong>.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 4: Aplicar efectos de texto</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Le da un "toque artístico" a tu texto, más allá del simple color. Sirve para hacer que los títulos resalten con efectos especiales como si fueran de neón o tuvieran una sombra 3D.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Selecciona tu texto.</li>
+                    <li>Ve a <strong>Inicio > Fuente</strong>.</li>
+                    <li>Haz clic en el botón <strong>Efectos de texto y tipografía</strong> (la 'A' con contorno azul).</li>
+                    <li>Elige un estilo predefinido o personaliza la <strong>Sombra</strong>, <strong>Reflejo</strong> o <strong>Iluminado</strong>.</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 5: Aplicar formato al usar Copiar formato</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>¡Es la "brocha mágica" y ahorra mucho tiempo! Te permite "absorber" el formato de un texto (ej. color rojo, tamaño 16, negrita) y "pintar" ese mismo formato sobre otro texto.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Selecciona el texto que tiene el formato que te gusta (el texto "maestro").</li>
+                    <li>Ve a <strong>Inicio > Portapapeles</strong> y haz clic en el ícono de la <strong>brocha (Copiar formato)</strong>.</li>
+                    <li>Tu cursor se convertirá en una brocha.</li>
+                    <li>"Pinta" (selecciona) el texto al que quieres aplicar el formato. ¡Listo!</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 6: Establecer Sangrías</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>La sangría es el espacio entre el párrafo y el margen de la página. Sirve para organizar la información, como dejar un espacio al inicio de un párrafo (típico de los cuentos) o para destacar citas.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Ve a las opciones avanzadas del grupo <strong>Párrafo</strong> (haciendo clic en la flechita de la esquina del grupo) y busca la sección "Sangría".</p>
+                <ul>
+                    <li><strong>Especial: Primera línea:</strong> Solo la primera línea del párrafo se mueve a la derecha.</li>
+                    <li><strong>Especial: Francesa:</strong> Todas las líneas se mueven, EXCEPTO la primera (usado en bibliografías).</li>
+                    <li><strong>Izquierda / Derecha:</strong> Mueve el párrafo completo.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 7: Establecer espaciado de párrafo</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Controla el espacio que hay <strong>ENTRE</strong> un párrafo y otro (el espacio "antes" de que empiece tu párrafo y "después" de que termine). Ayuda a que el texto "respire" y no se vea amontonado.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Ve a las opciones avanzadas del grupo <strong>Párrafo</strong> (en la pestaña Inicio) y busca la sección "Espaciado".</p>
+                <ul>
+                    <li><strong>Anterior:</strong> Añade espacio (en puntos 'pt') arriba del párrafo.</li>
+                    <li><strong>Posterior:</strong> Añade espacio (en puntos 'pt') abajo del párrafo.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 8: Establecer interlineado</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Controla el espacio <strong>DENTRO</strong> de un mismo párrafo (el espacio vertical entre una línea y la siguiente). Sirve para hacer el texto más fácil de leer.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>En la pestaña <strong>Inicio > Párrafo</strong>, haz clic en el botón de <strong>Espaciado entre líneas y párrafos</strong>.</p>
+                <ul>
+                    <li><strong>1.0:</strong> Interlineado sencillo.</li>
+                    <li><strong>1.5:</strong> Interlineado de línea y media.</li>
+                    <li><strong>2.0:</strong> Interlineado doble (muy usado en trabajos escolares).</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 9: Aplicar estilos integrados al texto</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Los estilos son un conjunto de formatos (fuente, tamaño, color) guardados con un nombre. Sirven para aplicar formato rápidamente y mantenerlo consistente. Usar "Título 1" y "Título 2" también te permite crear índices automáticos.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Selecciona el texto.</li>
+                    <li>Ve a la pestaña <strong>Inicio > galería de Estilos</strong>.</li>
+                    <li>Haz clic en un estilo, como <strong>Normal</strong> (para párrafos) o <strong>Título 1</strong> (para el título principal).</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 10: Borrar formato</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Sirve para limpiar un texto que copiaste de internet y que vino con colores, tamaños y tipos de letra extraños. Esta herramienta lo devuelve al formato "Normal" (limpio).</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Selecciona el texto que quieres limpiar.</li>
+                    <li>Ve a <strong>Inicio > Fuente</strong>.</li>
+                    <li>Haz clic en el ícono de la <strong>'A' con una goma de borrar</strong> (Borrar todo el formato).</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 11: Dar formato al texto en varias columnas</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Para que tu texto se vea como un periódico o una revista, dividiendo el contenido en dos o más columnas verticales en la misma página.</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <ol>
+                    <li>Selecciona el texto que quieres dividir (o no selecciones nada si quieres aplicarlo a toda la página).</li>
+                    <li>Ve a la pestaña <strong>Disposición > Configurar página > Columnas</strong>.</li>
+                    <li>Elige <strong>Dos</strong>, <strong>Tres</strong>, o "Más columnas..." para personalizarlo.</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Lección 12: Saltos de página, sección y columna</h2>
+                <h3>Para qué sirve / es útil:</h3>
+                <p>Los saltos te dan control total sobre dónde empieza y termina tu texto, sin tener que presionar "Enter" muchas veces (¡lo cual es incorrecto!).</p>
+                <h3>Cómo funciona / se ejecuta:</h3>
+                <p>Ve a la pestaña <strong>Disposición > Saltos</strong>.</p>
+                <ul>
+                    <li><strong>Salto de Página:</strong> Fuerza al texto a empezar en una hoja nueva. <strong>Atajo: CTRL + ENTER</strong>.</li>
+                    <li><strong>Salto de Columna:</strong> Si estás en un diseño de columnas, fuerza al texto a saltar a la siguiente columna.</li>
+                    <li><strong>Salto de Sección (Página siguiente):</strong> Es el más poderoso. Inserta un salto de página Y crea una "división" que te permite cambiar formatos drásticos (como la orientación de la hoja o los márgenes) sin afectar a las páginas anteriores.</li>
+                </ul>
             </section>
 
             <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            <button class="tts-button" onclick="readPageContent(this)">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
-                Leer Texto
-            </button>
         </main>
     </div>
-
-
-    <!-- ========== PÁGINA DE QUIZ (Genérica) ========== -->
-    <div id="page-quiz" class="page">
-        <header>
-            <h1 id="quiz-title">Quiz</h1>
-        </header>
-        <main>
-            <div class="quiz-container" id="quiz-container">
-                <div id="question-header">
-                    <h2 id="question-text">Cargando pregunta...</h2>
-                    <p id="question-counter"></p>
-                </div>
-                <ul id="options-container">
-                    <!-- Las opciones serán generadas por JavaScript -->
-                </ul>
-                <button id="submit-btn" class="quiz-button">Siguiente</button>
-            </div>
-
-            <div class="results-container" id="results-container" style="display: none;">
-                <h2 id="results-title">Resultados</h2>
-                <p id="results-score">Obtuviste 0 de 0 correctas.</p>
-                <div id="incorrect-answers">
-                    <h3>Respuestas incorrectas:</h3>
-                    <!-- Las preguntas falladas se listarán aquí -->
-                </div>
-                <button onclick="navigateToPage('page-main')" class="nav-button back-button">Volver a Temas</button>
-            </div>
-        </main>
-    </div>
-
-
-    <!-- Modal Simple para Alertas Custom -->
-    <div id="simple-modal" class="simple-modal">
-        <div class="simple-modal-content">
-            <span class="simple-modal-close" onclick="closeSimpleModal()">&times;</span>
-            <p id="simple-modal-text"></p>
-        </div>
-    </div>
-
 
     <!-- 
         *****************************************************
         SCRIPT (Lógica de la Página)
         *****************************************************
-        Todo el JavaScript está incrustado aquí.
-        Maneja la navegación de la página y la lógica del quiz.
     -->
     <script>
         // --- 1. LÓGICA DE NAVEGACIÓN ---
@@ -790,20 +570,6 @@
         }
 
         function navigateToPage(pageId, quizId = null) {
-            // Detener TTS si está hablando
-            if (isSpeaking) {
-                synth.cancel();
-                isSpeaking = false;
-                // Reiniciar botones de 'Detener' a 'Leer Texto'
-                document.querySelectorAll('.tts-button').forEach(btn => {
-                    btn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg> Leer Texto';
-                });
-            }
-
-            if (pageId === 'page-quiz') {
-                // Si vamos a un quiz, cargar los datos de ese quiz
-                loadQuiz(quizId);
-            }
             // Cambiar la página visualmente
             showPage(pageId);
         }
@@ -813,527 +579,7 @@
             showPage('page-main');
         });
 
-
-        // --- 2. BASE DE DATOS DE PREGUNTAS ---
-
-        const allQuestions = {
-            "topic1": {
-                "title": "Quiz 1: Creación y Navegación",
-                "questions": [
-                    {
-                        "question": "¿Cuál es el atajo de teclado para crear un nuevo documento en blanco?",
-                        "options": [
-                            "CTRL + B",
-                            "CTRL + G",
-                            "CTRL + U",
-                            "CTRL + L"
-                        ],
-                        "answer": "CTRL + U"
-                    },
-                    {
-                        "question": "¿Cuál es el atajo de teclado para abrir el panel de 'Buscar'?",
-                        "options": [
-                            "CTRL + L",
-                            "CTRL + B",
-                            "CTRL + U",
-                            "CTRL + N"
-                        ],
-                        "answer": "CTRL + B"
-                    },
-                    {
-                        "question": "¿Cuál es el atajo de teclado para abrir la ventana de 'Reemplazar'?",
-                        "options": [
-                            "CTRL + R",
-                            "CTRL + B",
-                            "CTRL + U",
-                            "CTRL + L"
-                        ],
-                        "answer": "CTRL + L"
-                    },
-                    {
-                        "question": "¿Qué es un 'Marcador' en Word?",
-                        "options": [
-                            "Una herramienta para dibujar",
-                            "Un tipo de letra especial",
-                            "Una 'etiqueta' invisible para guardar un lugar específico",
-                            "El borde de la página"
-                        ],
-                        "answer": "Una 'etiqueta' invisible para guardar un lugar específico"
-                    },
-                    {
-                        "question": "¿Cuál es una regla OBLIGATORIA al nombrar un Marcador?",
-                        "options": [
-                            "Debe tener espacios (ej. Capitulo Uno)",
-                            "Debe empezar con un número",
-                            "No puede tener espacios (ej. Capitulo_Uno)",
-                            "Debe estar en mayúsculas"
-                        ],
-                        "answer": "No puede tener espacios (ej. Capitulo_Uno)"
-                    }
-                ]
-            },
-            "topic2": {
-                "title": "Quiz 2: Formato de Página",
-                "questions": [
-                    {
-                        "question": "¿En qué pestaña principal encuentras las opciones de 'Márgenes', 'Orientación' y 'Tamaño'?",
-                        "options": [
-                            "Inicio",
-                            "Insertar",
-                            "Diseño",
-                            "Disposición"
-                        ],
-                        "answer": "Disposición"
-                    },
-                    {
-                        "question": "La 'Orientación' de la página te permite elegir entre...",
-                        "options": [
-                            "Carta y Oficio",
-                            "Vertical y Horizontal",
-                            "Márgenes anchos y estrechos",
-                            "Una y dos columnas"
-                        ],
-                        "answer": "Vertical y Horizontal"
-                    },
-                    {
-                        "question": "¿Qué tipo de Salto te permite cambiar la orientación de una sola página (de vertical a horizontal) sin afectar al resto?",
-                        "options": [
-                            "Salto de Página",
-                            "Salto de Columna",
-                            "Salto de Sección",
-                            "Salto de Texto"
-                        ],
-                        "answer": "Salto de Sección"
-                    },
-                    {
-                        "question": "¿Cuál es el atajo de teclado para insertar un 'Salto de Página'?",
-                        "options": [
-                            "CTRL + L",
-                            "CTRL + ENTER",
-                            "CTRL + U",
-                            "CTRL + B"
-                        ],
-                        "answer": "CTRL + ENTER"
-                    },
-                    {
-                        "question": "¿En qué pestaña encuentras la opción para añadir 'Bordes de Página' (un marco a la hoja)?",
-                        "options": [
-                            "Inicio",
-                            "Insertar",
-                            "Diseño",
-                            "Disposición"
-                        ],
-                        "answer": "Diseño"
-                    }
-                ]
-            },
-            "topic3": {
-                "title": "Quiz 3: Formato de Texto y Párrafo",
-                "questions": [
-                    {
-                        "question": "¿Qué hace la herramienta 'Copiar Formato' (el ícono de la brocha)?",
-                        "options": [
-                            "Copia el texto y lo pega en otro lado",
-                            "Copia solo el formato (color, tamaño, etc.) para 'pintarlo' en otro texto",
-                            "Borra todo el formato del documento",
-                            "Inserta una brocha como símbolo"
-                        ],
-                        "answer": "Copia solo el formato (color, tamaño, etc.) para 'pintarlo' en otro texto"
-                    },
-                    {
-                        "question": "¿Qué hace el comando 'Borrar todo el formato' (la 'A' con goma de borrar)?",
-                        "options": [
-                            "Elimina el texto seleccionado",
-                            "Limpia el texto seleccionado de todo formato (color, negrita, etc.)",
-                            "Deshace la última acción",
-                            "Abre la herramienta de dibujo"
-                        ],
-                        "answer": "Limpia el texto seleccionado de todo formato (color, negrita, etc.)"
-                    },
-                    {
-                        "question": "Los Efectos de Texto (Sombra, Iluminado, Reflejo) se encuentran en...",
-                        "options": [
-                            "Pestaña Insertar > Símbolos",
-                            "Pestaña Diseño > Bordes",
-                            "Pestaña Inicio > Grupo Fuente",
-                            "Pestaña Disposición > Márgenes"
-                        ],
-                        "answer": "Pestaña Inicio > Grupo Fuente"
-                    },
-                    {
-                        "question": "La 'Brocha Mágica' (Copiar Formato) se encuentra en la pestaña 'Inicio', dentro del grupo...",
-                        "options": [
-                            "Fuente",
-                            "Párrafo",
-                            "Estilos",
-                            "Portapapeles"
-                        ],
-                        "answer": "Portapapeles"
-                    },
-                    {
-                        "question": "Negrita, Cursiva, Subrayado y Color de Fuente son opciones del grupo...",
-                        "options": [
-                            "Fuente",
-                            "Párrafo",
-                            "Edición",
-                            "Portapapeles"
-                        ],
-                        "answer": "Fuente"
-                    }
-                ]
-            },
-            "topic4": {
-                "title": "Quiz 4: Estilos y Espaciado",
-                "questions": [
-                    {
-                        "question": "¿Qué es una sangría de 'Primera Línea'?",
-                        "options": [
-                            "Mueve todo el párrafo a la derecha",
-                            "Mueve todas las líneas EXCEPTO la primera",
-                            "Mueve solo la primera línea del párrafo a la derecha",
-                            "Añade un espacio antes del párrafo"
-                        ],
-                        "answer": "Mueve solo la primera línea del párrafo a la derecha"
-                    },
-                    {
-                        "question": "El 'Interlineado' se refiere a...",
-                        "options": [
-                            "El espacio ENTRE párrafos",
-                            "El espacio DENTRO de un párrafo (entre las líneas)",
-                            "El espacio en los márgenes de la página",
-                            "El espacio entre letras"
-                        ],
-                        "answer": "El espacio DENTRO de un párrafo (entre las líneas)"
-                    },
-                    {
-                        "question": "El espaciado 'Anterior' y 'Posterior' (medido en puntos 'pt') se refiere a...",
-                        "options": [
-                            "El espacio ENTRE párrafos",
-                            "El espacio DENTRO de un párrafo",
-                            "El espacio en los márgenes",
-                            "El tamaño de la letra"
-                        ],
-                        "answer": "El espacio ENTRE párrafos"
-                    },
-                    {
-                        "question": "¿En qué pestaña puedes cambiar el 'outfit' completo del documento (Conjuntos de Estilos)?",
-                        "options": [
-                            "Inicio",
-                            "Insertar",
-                            "Diseño",
-                            "Disposición"
-                        ],
-                        "answer": "Diseño"
-                    },
-                    {
-                        "question": "'Título 1', 'Título 2' y 'Normal' son ejemplos de...",
-                        "options": [
-                            "Fuentes",
-                            "Estilos",
-                            "Márgenes",
-                            "Columnas"
-                        ],
-                        "answer": "Estilos"
-                    }
-                ]
-            },
-            "topic5": {
-                "title": "Quiz 5: Guardar e Inspeccionar",
-                "questions": [
-                    {
-                        "question": "Usas 'Guardar como' para...",
-                        "options": [
-                            "Revisar la ortografía del documento",
-                            "Cambiar el formato del archivo (ej. a PDF) o guardarlo con otro nombre",
-                            "Borrar información oculta",
-                            "Cambiar los márgenes de la página"
-                        ],
-                        "answer": "Cambiar el formato del archivo (ej. a PDF) o guardarlo con otro nombre"
-                    },
-                    {
-                        "question": "¿Para qué sirve 'Inspeccionar documento'?",
-                        "options": [
-                            "Para buscar errores de ortografía",
-                            "Para encontrar y eliminar información personal oculta (como autor o comentarios)",
-                            "Para ver si funcionará en versiones antiguas de Word",
-                            "Para añadir un borde a la página"
-                        ],
-                        "answer": "Para encontrar y eliminar información personal oculta (como autor o comentarios)"
-                    },
-                    {
-                        "question": "¿Dónde puedes cambiar las 'Propiedades' del documento, como el 'Autor' o 'Título'?",
-                        "options": [
-                            "Pestaña Inicio > Fuente",
-                            "Pestaña Disposición > Configurar página",
-                            "Archivo > Información > Propiedades",
-                            "Archivo > Opciones"
-                        ],
-                        "answer": "Archivo > Información > Propiedades"
-                    },
-                    {
-                        "question": "¿Qué revisa la herramienta 'Comprobar accesibilidad'?",
-                        "options": [
-                            "Si el archivo se puede abrir en un teléfono",
-                            "Si tiene virus",
-                            "Si tiene contenido que es difícil de leer para personas con discapacidad",
-                            "Si el autor es correcto"
-                        ],
-                        "answer": "Si tiene contenido que es difícil de leer para personas con discapacidad"
-                    },
-                    {
-                        "question": "¿Qué revisa la herramienta 'Comprobar compatibilidad'?",
-                        "options": [
-                            "Si tu computadora es compatible con Word",
-                            "Si el archivo se verá mal o perderá funciones en versiones ANTIGUAS de Word",
-                            "Si es compatible con Google Docs",
-                            "Si tienes la licencia correcta"
-                        ],
-                        "answer": "Si el archivo se verá mal o perderá funciones en versiones ANTIGUAS de Word"
-                    }
-                ]
-            }
-        };
-
-
-        // --- 3. LÓGICA DEL QUIZ ---
-
-        // Variables globales para el estado del quiz
-        let currentQuestions = [];
-        let currentQuestionIndex = 0;
-        let userAnswers = [];
-        let score = 0;
-        let totalQuestions = 5; // Todos los quizzes tendrán 5 preguntas
-        let currentQuizId = '';
-
-        // Elementos del DOM para el Quiz
-        const quizContainer = document.getElementById('quiz-container');
-        const resultsContainer = document.getElementById('results-container');
-        const quizTitle = document.getElementById('quiz-title');
-        const questionText = document.getElementById('question-text');
-        const questionCounter = document.getElementById('question-counter');
-        const optionsContainer = document.getElementById('options-container');
-        const submitBtn = document.getElementById('submit-btn');
-        const resultsScore = document.getElementById('results-score');
-        const incorrectAnswersList = document.getElementById('incorrect-answers');
-
-        // Función para mezclar un array (Fisher-Yates)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // Función para cargar el quiz
-        function loadQuiz(quizId) {
-            if (!quizId || !allQuestions[quizId]) {
-                quizTitle.textContent = "Error";
-                questionText.textContent = "Quiz no encontrado. Por favor regresa.";
-                submitBtn.style.display = 'none';
-                return;
-            }
-            
-            currentQuizId = quizId;
-            const quizData = allQuestions[quizId];
-            quizTitle.textContent = quizData.title;
-            
-            // Mostrar quiz y ocultar resultados
-            quizContainer.style.display = 'block';
-            resultsContainer.style.display = 'none';
-            submitBtn.style.display = 'block';
-            
-            // Obtener 5 preguntas aleatorias del banco de preguntas del tema
-            let questionsToLoad = shuffleArray([...quizData.questions]);
-            currentQuestions = questionsToLoad.slice(0, 5);
-            totalQuestions = 5;
-
-            userAnswers = new Array(totalQuestions).fill(null);
-            currentQuestionIndex = 0;
-            score = 0;
-
-            showQuestion();
-        }
-
-        // Función para mostrar la pregunta actual
-        function showQuestion() {
-            // Deseleccionar opciones previas
-            deselectOptions();
-
-            const questionData = currentQuestions[currentQuestionIndex];
-            
-            // Mezclar las opciones para esta pregunta
-            let shuffledOptions = shuffleArray([...questionData.options]);
-            
-            questionText.textContent = questionData.question;
-            questionCounter.textContent = `Pregunta ${currentQuestionIndex + 1} de ${totalQuestions}`;
-            optionsContainer.innerHTML = '';
-
-            shuffledOptions.forEach(option => {
-                const li = document.createElement('li');
-                li.textContent = option;
-                li.onclick = () => selectOption(li, option);
-                optionsContainer.appendChild(li);
-            });
-
-            if (currentQuestionIndex === totalQuestions - 1) {
-                submitBtn.textContent = 'Terminar Quiz';
-            } else {
-                submitBtn.textContent = 'Siguiente';
-            }
-        }
-
-        // Función para seleccionar una opción
-        function selectOption(selectedLi, option) {
-            deselectOptions();
-            selectedLi.classList.add('selected');
-            userAnswers[currentQuestionIndex] = option;
-        }
-
-        // Función para quitar 'selected' de todas las opciones
-        function deselectOptions() {
-            const options = optionsContainer.getElementsByTagName('li');
-            Array.from(options).forEach(option => {
-                option.classList.remove('selected');
-            });
-        }
-
-        // Event Listener para el botón Siguiente/Terminar
-        submitBtn.addEventListener('click', () => {
-            const selectedOption = userAnswers[currentQuestionIndex];
-            
-            if (selectedOption === null) {
-                // Usar modal custom en vez de alert
-                showSimpleModal('Por favor selecciona una respuesta.');
-                return;
-            }
-
-            // Revisar si la respuesta es correcta
-            if (selectedOption === currentQuestions[currentQuestionIndex].answer) {
-                score++;
-            }
-
-            currentQuestionIndex++;
-
-            if (currentQuestionIndex < totalQuestions) {
-                showQuestion();
-            } else {
-                showResults();
-            }
-        });
-
-        // Función para mostrar los resultados finales
-        function showResults() {
-            quizContainer.style.display = 'none';
-            resultsContainer.style.display = 'block';
-
-            resultsScore.textContent = `Obtuviste ${score} de ${totalQuestions} correctas.`;
-
-            let incorrectHtml = '<ul>';
-            let hasIncorrect = false;
-            currentQuestions.forEach((question, index) => {
-                if (userAnswers[index] !== question.answer) {
-                    hasIncorrect = true;
-                    incorrectHtml += `
-                        <li>
-                            <p class="question">${index + 1}. ${question.question}</p>
-                            <p class="user-answer"><strong>Tu respuesta:</strong> ${userAnswers[index] || "No respondida"}</p>
-                            <p class="correct-answer"><strong>Respuesta correcta:</strong> ${question.answer}</p>
-                        </li>
-                    `;
-                }
-            });
-            incorrectHtml += '</ul>';
-
-            // Limpiar resultados previos y añadir nuevos
-            incorrectAnswersList.innerHTML = '<h3>Respuestas incorrectas:</h3>'; // Reiniciar
-            
-            if (!hasIncorrect) {
-                incorrectAnswersList.innerHTML = '<h3>¡Felicidades! ¡Todas las respuestas son correctas!</h3>';
-            } else {
-                incorrectAnswersList.innerHTML += incorrectHtml;
-            }
-        }
-
-        // --- 4. LÓGICA DE TEXT-TO-SPEECH (TTS) ---
-        let isSpeaking = false;
-        const synth = window.speechSynthesis;
-
-        function readPageContent(button) {
-            if (isSpeaking) {
-                synth.cancel(); // Detener narración
-                return; // onend se encargará de reiniciar el botón
-            }
-
-            const activePage = document.querySelector('.page.active');
-            if (!activePage) return;
-
-            // Encontrar el área de contenido principal de la página activa
-            const mainContent = activePage.querySelector('main');
-            if (!mainContent) return;
-
-            // Seleccionar todos los elementos de texto relevantes *excepto* el quiz y botones
-            const elementsToRead = mainContent.querySelectorAll('h2, h3, p, li, dt, dd');
-            
-            let textToSpeak = "";
-            elementsToRead.forEach(el => {
-                // Evitar leer el texto del link al quiz
-                if (!el.closest('.quiz-link') && !el.closest('.nav-button')) {
-                    textToSpeak += el.textContent + ". ";
-                }
-            });
-
-            if (textToSpeak.trim() === "") return;
-
-            const utterance = new SpeechSynthesisUtterance(textToSpeak);
-            utterance.lang = 'es-MX'; // *** IMPORTANTE: Cambiado a Español ***
-            
-            const speakerIcon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg> Leer Texto';
-            const stopIcon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h12v12H6z"></path></svg> Detener';
-
-            utterance.onstart = () => {
-                isSpeaking = true;
-                button.innerHTML = stopIcon;
-            };
-
-            const resetBtn = () => {
-                isSpeaking = false;
-                button.innerHTML = speakerIcon;
-            };
-
-            utterance.onend = resetBtn;
-            utterance.onerror = (event) => {
-                console.error('SpeechSynthesisUtterance.onerror', event);
-                resetBtn();
-            };
-            
-            synth.speak(utterance);
-        }
-
-        // --- 5. MODAL DE ALERTA CUSTOM ---
-        const modal = document.getElementById('simple-modal');
-        const modalText = document.getElementById('simple-modal-text');
-
-        function showSimpleModal(message) {
-            modalText.textContent = message;
-            modal.style.display = "block";
-        }
-
-        function closeSimpleModal() {
-            modal.style.display = "none";
-        }
-
-        // Cerrar modal si el usuario da clic fuera de él
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeSimpleModal();
-            }
-        }
-
     </script>
 </body>
 </html>
-
-
-
 
